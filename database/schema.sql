@@ -27,3 +27,4 @@ CREATE TABLE products (
     price DECIMAL,
     category_id INTEGER REFERENCES category(id)
 );
+

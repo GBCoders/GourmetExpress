@@ -1,5 +1,5 @@
 FROM python:3.10-alpine
-RUN pip install flask
 COPY . /app
-# COPY . /database /docker-entrypoint.initdb.d/
+RUN apk add libpq-dev gcc libc-dev
+RUN pip install -r /app/requirements.txt
 CMD ["python","/app/run.py"]

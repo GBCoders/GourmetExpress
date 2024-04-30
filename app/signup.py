@@ -1,6 +1,5 @@
-
-from app import db
-from models import User
+from .app import db
+from .models import User
 
 # estou em duvida se aciono o id, ele é criado sozinho
 def register_user(username, email, password):

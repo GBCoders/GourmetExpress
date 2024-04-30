@@ -1,13 +1,7 @@
-from flask import Flask, request, jsonify
-from login import authenticate
-from signup import register_user
-
-from flask_sqlalchemy import SQLAlchemy
-# instalar o alchem
-# e concetar  a tabela
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://id:username:password@localhost/pg_gourmetexpress'
-db = SQLAlchemy(app)
+from flask import request, jsonify
+from .login import authenticate
+from .signup import register_user
+from .app import app
 
 @app.route('/')
 def index():

@@ -1,6 +1,3 @@
-
-
-
 def authenticate(email, password):
  if email == 'gleice@gmail.com' and password == 'gleice123':
     return True
