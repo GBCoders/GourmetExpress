@@ -1,12 +1,8 @@
-from app.routes import app
-
-# import requests
-
-# url = 'http://localhost:5001/login'
-# data = {'email': 'gleice@gmail.com', 'password': 'gleice123'}
-# response = requests.post(url, json=data)
-
-# print(response.json())
+from app.app import app, db
+from app.models.products import Products, Category
 
 if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
     app.run(debug=True, host="0.0.0.0")
+
